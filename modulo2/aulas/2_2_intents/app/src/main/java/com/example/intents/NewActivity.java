@@ -6,17 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class NewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_newactivity);
     }
 
-    public void novaTela(View view) {
-        Intent messageIntent = new Intent(this, NewActivity.class);
-
-        startActivity(messageIntent);
+    public void voltaTela(View view) {
+        Intent oldScreen = new Intent(this, MainActivity.class);
+        startActivity(oldScreen);
     }
 }
