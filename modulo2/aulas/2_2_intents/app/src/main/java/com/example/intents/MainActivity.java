@@ -8,6 +8,8 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    public final static String MENSAGEM_ADICIONAL = "com.example.intents.MENSAGEM";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void novaTela(View view) {
         Intent messageIntent = new Intent(this, NewActivity.class);
+
+        messageIntent.putExtra(MENSAGEM_ADICIONAL, "Testando essa bagaça");
 
         startActivity(messageIntent);
     }
